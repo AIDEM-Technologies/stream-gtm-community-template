@@ -15,5 +15,5 @@
 homepage: "https://www.aidem.com"
 documentation: "https://kb.aidem.com/stream/getting-started/introduction/"
 versions:
-  - sha: 69beefd485d4ba91b68067ef314903e3fbf128de
+  - sha: a248d26743fac87e41c0924714d40420d6e3672d
     changeNotes: Initial Version
