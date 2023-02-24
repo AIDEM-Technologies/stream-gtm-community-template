@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -49,20 +49,17 @@ ___TEMPLATE_PARAMETERS___
     "defaultValue": false
   },
   {
-    "type": "RADIO",
+    "type": "SELECT",
     "name": "event",
-    "displayName": "Event",
-    "radioItems": [
+    "displayName": "event",
+    "selectItems": [
       {
         "value": "PageView",
-        "displayValue": "PageView",
-        "help": "",
-        "subParams": []
+        "displayValue": "PageView"
       },
       {
         "value": "AddToCart",
-        "displayValue": "AddToCart",
-        "subParams": []
+        "displayValue": "AddToCart"
       },
       {
         "value": "AddToWishlist",
@@ -102,52 +99,7 @@ ___TEMPLATE_PARAMETERS___
       },
       {
         "value": "Purchase",
-        "displayValue": "Purchase",
-        "subParams": [
-          {
-            "type": "TEXT",
-            "name": "price",
-            "displayName": "price",
-            "simpleValueType": true,
-            "valueValidators": [
-              {
-                "type": "REGEX",
-                "args": [
-                  "^[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)$"
-                ]
-              },
-              {
-                "type": "NON_EMPTY"
-              }
-            ]
-          },
-          {
-            "type": "SELECT",
-            "name": "currency",
-            "displayName": "currency",
-            "selectItems": [
-              {
-                "value": "EUR",
-                "displayValue": "EUR"
-              },
-              {
-                "value": "GBP",
-                "displayValue": "GBP"
-              },
-              {
-                "value": "USD",
-                "displayValue": "USD"
-              }
-            ],
-            "simpleValueType": true,
-            "defaultValue": "USD",
-            "valueValidators": [
-              {
-                "type": "NON_EMPTY"
-              }
-            ]
-          }
-        ]
+        "displayValue": "Purchase"
       },
       {
         "value": "Schedule",
@@ -183,6 +135,99 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "event_id",
     "simpleValueType": true,
     "help": "To use the Conversion API, add the event_id parameter to the payload, which must be a unique identifier of the transaction. If you are already using Meta, to avoid duplication of events, the event_id passed must be the eventID of the Meta pixel."
+  },
+  {
+    "type": "TEXT",
+    "name": "price",
+    "displayName": "price",
+    "simpleValueType": true,
+    "valueValidators": [
+      {
+        "type": "REGEX",
+        "args": [
+          "^[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)$"
+        ],
+        "errorMessage": "The value must be a float"
+      },
+      {
+        "type": "NON_EMPTY"
+      }
+    ],
+    "enablingConditions": [
+      {
+        "paramName": "event",
+        "paramValue": "Donate",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "DonateRecurring",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "Purchase",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "StartTrial",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "Subscribe",
+        "type": "EQUALS"
+      }
+    ]
+  },
+  {
+    "type": "SELECT",
+    "name": "currency",
+    "displayName": "currency",
+    "selectItems": [
+      {
+        "value": "EUR",
+        "displayValue": "EUR"
+      },
+      {
+        "value": "GBP",
+        "displayValue": "GBP"
+      },
+      {
+        "value": "USD",
+        "displayValue": "USD"
+      }
+    ],
+    "simpleValueType": true,
+    "defaultValue": "USD",
+    "enablingConditions": [
+      {
+        "paramName": "event",
+        "paramValue": "Donate",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "DonateRecurring",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "Purchase",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "StartTrial",
+        "type": "EQUALS"
+      },
+      {
+        "paramName": "event",
+        "paramValue": "Subscribe",
+        "type": "EQUALS"
+      }
+    ]
   }
 ]
 
