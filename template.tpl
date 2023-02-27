@@ -124,6 +124,18 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "ViewContent",
         "displayValue": "ViewContent"
+      },
+      {
+        "value": "CoverageCheck",
+        "displayValue": "CoverageCheck"
+      },
+      {
+        "value": "CallMeBack",
+        "displayValue": "CallMeBack"
+      },
+      {
+        "value": "ClickToCall",
+        "displayValue": "ClickToCall"
       }
     ],
     "simpleValueType": true,
@@ -505,5 +517,8 @@ scenarios: []
 ___NOTES___
 
 Created on 23/2/2023, 21:11:40
+
+
+
 
 
