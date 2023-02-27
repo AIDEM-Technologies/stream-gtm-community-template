@@ -16,6 +16,8 @@ homepage: "https://www.aidem.com"
 documentation: "https://kb.aidem.com/stream/getting-started/introduction/"
 versions:
   # Latest version
+  - sha: 0b35ed7032f0673726290ef2f0d8149e2dbef617
+    changeNotes: Added new events
   - sha: 7e425bda32b66b6cd3690e55d311fc3cfa5c79b4
     changeNotes: Moved event selection to list
   # Older versions
