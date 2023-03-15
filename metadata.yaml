@@ -17,7 +17,7 @@ documentation: "https://kb.aidem.com/stream/getting-started/introduction/"
 versions:
   # Latest version
   - sha: 89847fb6f008e9dda1165635b67a3b278db16782
-    changeNotes: Added new events
+    changeNotes: Added new event
   - sha: 0b35ed7032f0673726290ef2f0d8149e2dbef617
     changeNotes: Added new events
   - sha: 7e425bda32b66b6cd3690e55d311fc3cfa5c79b4
