@@ -62,6 +62,10 @@ ___TEMPLATE_PARAMETERS___
         "displayValue": "AddToCart"
       },
       {
+        "value": "AddPaymentInfo",
+        "displayValue": "AddPaymentInfo"
+      },
+      {
         "value": "AddToWishlist",
         "displayValue": "AddToWishlist"
       },
@@ -517,8 +521,5 @@ scenarios: []
 ___NOTES___
 
 Created on 23/2/2023, 21:11:40
-
-
-
 
 
