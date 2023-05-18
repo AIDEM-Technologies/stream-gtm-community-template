@@ -62,10 +62,6 @@ ___TEMPLATE_PARAMETERS___
         "displayValue": "AddToCart"
       },
       {
-        "value": "AddPaymentInfo",
-        "displayValue": "AddPaymentInfo"
-      },
-      {
         "value": "AddToWishlist",
         "displayValue": "AddToWishlist"
       },
@@ -140,6 +136,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "ClickToCall",
         "displayValue": "ClickToCall"
+      },
+      {
+        "value": "AddPaymentInfo",
+        "displayValue": "AddPaymentInfo"
       }
     ],
     "simpleValueType": true,
@@ -244,6 +244,12 @@ ___TEMPLATE_PARAMETERS___
         "type": "EQUALS"
       }
     ]
+  },
+  {
+    "type": "TEXT",
+    "name": "sku",
+    "displayName": "sku",
+    "simpleValueType": true
   }
 ]
 
@@ -276,6 +282,7 @@ let eventOptions = {};
 if(data.event_id) eventOptions.event_id = data.event_id;
 if(data.price) eventOptions.price = data.price;
 if(data.currency) eventOptions.currency = data.currency;
+if(data.sku) eventOptions.sku = data.sku;
 
 callInWindow('aidemstream', 'track', data.event, eventOptions);
 
