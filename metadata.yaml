@@ -16,6 +16,8 @@ homepage: "https://www.aidem.com"
 documentation: "https://kb.aidem.com/stream/getting-started/introduction/"
 versions:
   # Latest version
+  - sha: bbf5a776768d2df4fbf8ca16009411bda3e405db
+    changeNotes: Added sku field
   - sha: 89847fb6f008e9dda1165635b67a3b278db16782
     changeNotes: Added new event
   - sha: 0b35ed7032f0673726290ef2f0d8149e2dbef617
